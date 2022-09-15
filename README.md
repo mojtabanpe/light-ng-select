@@ -34,3 +34,10 @@ keys: Array<any> = []
 selectedKey: any
 
 default selectedKey is the first one.
+
+
+### Outputs
+
+| Output  | Description |
+| ------------- | ------------- |
+| (key)  | Fired when item is selected |
