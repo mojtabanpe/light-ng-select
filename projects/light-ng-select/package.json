@@ -1,0 +1,12 @@
+{
+  "name": "light-ng-select",
+  "version": "0.0.5",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "keywords": ["dropdown", "angular", "select", "simple", "ng"]
+}

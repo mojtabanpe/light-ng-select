@@ -1,0 +1,10 @@
+<div class="light-ng-select">
+    <div class="light-ng-select-value" *ngIf="selectedKey" (click)="isOpen = !isOpen" [ngClass]="{'in-close-view': !isOpen}">
+        <span>{{selectedKey}}</span>
+        <span class="light-ng-select-toggle-button" [ngClass]="isOpen === true ? 'arrow-up' : 'arrow-down'"></span>
+    </div>
+    <div class="light-ng-select-items-container"  [ngClass]="isOpen === true ? 'open' : 'close'">
+        <div class="light-ng-select-item" *ngFor="let item of keys" (click)="changeSelectedKey(item)">{{item}}</div>
+    </div>
+  </div>
+  
