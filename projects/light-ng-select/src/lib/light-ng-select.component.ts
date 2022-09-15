@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'light-ng-select',
@@ -8,6 +8,7 @@ import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 export class LightNGSelectComponent implements OnInit {
   @Input() keys: Array<any> = [];
   @Input() selectedKey: any;
+  @Output() key = new EventEmitter();
   isOpen = false;
 
   @HostListener('document:click', ['$event'])
@@ -28,6 +29,7 @@ export class LightNGSelectComponent implements OnInit {
   changeSelectedKey(item: any): void {
     this.selectedKey = item;
     this.isOpen = false;
+    this.key.emit(item);
   }
 
 }
