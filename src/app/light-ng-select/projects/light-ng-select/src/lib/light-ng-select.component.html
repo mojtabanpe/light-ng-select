@@ -1,0 +1,13 @@
+<div class="light-ng-select">
+    <div class="light-ng-select-value" [style.color]="color" (click)="isOpen = !isOpen" [ngClass]="{'in-close-view': !isOpen}">
+        <span *ngIf="selectedKey">{{selectedKey}}</span>
+        <span *ngIf="!selectedKey && keys.length !== 0">{{placeholder}}</span>
+        <span *ngIf="keys.length === 0">داده ای برای نمایش وجود ندارد!</span>
+        <span #arrow *ngIf="keys.length !== 0" class="light-ng-select-toggle-button" [ngClass]="isOpen === true ? 'arrow-up' : 'arrow-down'"></span>
+    </div>
+    <div class="light-ng-select-items-container"  [ngClass]="isOpen === true ? 'open' : 'close'">
+        <div class="light-ng-select-item" id="light-ng-select-item-{{i}}" *ngFor="let item of keys; index as i" 
+        (click)="changeSelectedKey(item)" (mouseenter)="itemMouseEnter($event.target)" (mouseout)="itemMouseOut($event.target)">{{item}}</div>
+    </div>
+  </div>
+  

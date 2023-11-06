@@ -1,0 +1,64 @@
+.light-ng-select{
+    width: 99%;
+    height: 50px;
+    position: relative;
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid lightgray;
+    margin: 1rem;
+    margin: .2rem;
+}
+
+.light-ng-select-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+.light-ng-select-value.in-close-view {
+    border-radius: 5px;
+}
+
+.light-ng-select-items-container {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 0 10px lightgray
+}
+
+.light-ng-select-items-container.close {
+    display: none;
+}
+
+
+.light-ng-select-item {
+    display: flex;
+    box-shadow: 0 0 1px lightgray;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.light-ng-select-item:hover {
+    color: white;
+    border-radius: 3px;
+}
+
+.light-ng-select-toggle-button {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transition: all .1s linear;
+}
+
+.arrow-up {
+    border-bottom: 5px solid;
+  }
+  
+.arrow-down {
+    border-top: 5px solid;
+}
